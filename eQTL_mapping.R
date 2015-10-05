@@ -141,7 +141,7 @@ maxlod5=scanone(genotype_map, pheno.col=20001:25663, model=c("normal"), method=c
 tabbycol_20001<-summary(pheno_wetLOD5, format="tabByCol", pvalues=TRUE, perm=maxlod5, ci.function="lodint")
 write.table(tabbycol_10001, file = "Tab_by_20001_Mckay_sum_SNP.txt", quote=FALSE, row.name=FALSE)
 
-save.image(pheno_wetLOD5, pheno_wetLOD4, pheno_wetLOD3, pheno_wetLOD2, pheno_wetLOD1, file='EQTL_wet.RData')
+save(pheno_wetLOD5, pheno_wetLOD4, pheno_wetLOD3, pheno_wetLOD2, pheno_wetLOD1, file='EQTL_wet.RData')
 
 ###Analyzing the different statistical methods in scanone function for locating QTLs and estimating their effects. 
 
@@ -231,5 +231,4 @@ maxlod5=scanone(genotype_map, pheno.col=20001:25663, model=c("normal"), method=c
 tabbycol_20001<-summary(pheno_wetLOD5, format="tabByCol", pvalues=TRUE, perm=maxlod5, ci.function="lodint")
 write.table(tabbycol_10001, file = "Tab_by_20001_Mckay_sum_SNP_dry.txt", quote=FALSE, row.name=FALSE)
 
-
-save.image(pheno_dryLOD5, pheno_dryLOD4, pheno_dryLOD3, pheno_dryLOD2, pheno_dryLOD1, file='EQTL_dry.RData')
+save(pheno_dryLOD5, pheno_dryLOD4, pheno_dryLOD3, pheno_dryLOD2, pheno_dryLOD1, file='EQTL_dry.RData')
